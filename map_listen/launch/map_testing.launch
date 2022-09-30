@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="map-listen" type="map_listen.py" name="map_listen" output="screen">
+        <param name="map_Topic" value="/tb3_0/map"/>
+    </node>
+
+</launch>
