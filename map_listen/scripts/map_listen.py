@@ -2,7 +2,6 @@
 
 #--------Include modules---------------
 import rospy
-import time
 import tf
 from nav_msgs.msg import OccupancyGrid
 
@@ -20,7 +19,7 @@ def node():
     global mapData
     rospy.init_node('map_listen', anonymous=False)
 
-    map_Topic         = rospy.get_param('~s', '/map')   # map topic
+    map_Topic         = rospy.get_param('~map_Topic', '/map')   # map topic
 
 
     rospy.Subscriber(map_Topic, OccupancyGrid, mapCallBack)
